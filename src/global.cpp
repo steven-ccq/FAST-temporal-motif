@@ -1,6 +1,9 @@
 #include "global.h"
 
-vector<Edge> edges;  //è®°å½•æ‰€æœ‰è¾¹
-vector<vector<StarEdgeData>> starEdges;  //è®°å½•æ‰€æœ‰ç‚¹çš„æ˜Ÿå½¢è¾¹
-vector<map<int, vector<int>>> edgeMap;  //è®°å½•ä¸¤ç‚¹é—´çš„æ‰€æœ‰è¾¹
-int nodesNum;  //æ‰€æœ‰ç‚¹çš„ä¸ªæ•°
+vector<Edge> edges;  //¼ÇÂ¼ËùÓĞ±ß
+vector<vector<StarEdgeData>> starEdges;  //¼ÇÂ¼ËùÓĞµãµÄĞÇĞÎ±ß
+vector<map<int, vector<int>>> edgeMap;  //¼ÇÂ¼Á½µã¼äµÄËùÓĞ±ß
+int nodesNum;  //ËùÓĞµãµÄ¸öÊı
+int threadNum = 1;
+bool ompFlag = false;
+int thrd = INT_MAX;

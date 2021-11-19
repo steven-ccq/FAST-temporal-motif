@@ -45,7 +45,7 @@ struct StarEdgeData {
 //排序函数
 bool cmp(const StarEdgeData& edge1, const StarEdgeData& edge2);
 //获取所有边
-void getEdges(const string& file);
+bool getEdges(const string& file);
 //获取starEdges
 void getStarEdges();
 //获取edgeMap

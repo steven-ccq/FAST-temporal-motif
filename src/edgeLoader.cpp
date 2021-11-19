@@ -9,24 +9,31 @@ bool cmp(const StarEdgeData& edge1, const StarEdgeData& edge2)
     return edge1.t<edge2.t||(edge1.t==edge2.t&&edge1.nbr<edge2.nbr);
 }
 
-void getEdges(const string& file)
+bool getEdges(const string& file)
 {
     ifstream infile;
     infile.open(file, ios::in);
+    if(!infile.is_open ())
+    {
+        cout << "open input file failed" << endl;
+        cout << "input file path: " << file << endl;
+        return false;
+    }
     while(!infile.eof())
     {
         int node1, node2, timestamp;
         infile >> node1 >> node2 >> timestamp;
+        if(node1==node2) continue;
         Edge edge(node1, node2, timestamp);
         edges.push_back(edge);
     }
+    infile.close();
     int edgesNum = edges.size();
     if(edgesNum>0)
     {
         edges.pop_back();
         edgesNum -= 1;
     }
-    infile.close();
     cout << edgesNum << endl;
     set<int> nodes;
     for(int i=0;i<edgesNum;i++)
@@ -46,6 +53,7 @@ void getEdges(const string& file)
         edges[i].node1 = nodes_nbr[edges[i].node1];
         edges[i].node2 = nodes_nbr[edges[i].node2];
     }
+    return true;
 }
 
 void getStarEdges()
