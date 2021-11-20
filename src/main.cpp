@@ -21,7 +21,8 @@ int main(int argc, char **argv)
     if(args.find("-f")!=args.end()) ompFlag = stoi(args["-f"]);
     if(args.find("-t")!=args.end()) threadNum = stoi(args["-t"]);
     if(args.find("-d")!=args.end()) thrd = stoi(args["-d"]);
-    int timeWindow = stoi(args["-w"]);
+    int timeWindow = 2147483647;
+    if(args.find("-w")!=args.end()) timeWindow = stoi(args["-w"]);
 
     bool inputFlag = getEdges(inputFile);
     if(!inputFlag) return 0;
