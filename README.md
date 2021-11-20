@@ -22,7 +22,7 @@
 ├── makefile
 └── README.md
 ```
-3. do "make* to compile the project, and get FAST_temporal_motif.exe
+2. do "make* to compile the project, and get FAST_temporal_motif.exe
 ```bash
 make
 ```
@@ -53,7 +53,9 @@ The order of the arguments can be changed
 ## Data file
 ### Input data file
 n rows, each row represents a directed edge
+
 3 data in each row, representing node 1, node 2, and timestamp
+
 use space as separator
 ### Output file
 a 6*6 martix
