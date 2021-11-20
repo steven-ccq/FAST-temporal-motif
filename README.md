@@ -44,6 +44,7 @@ FAST_temporal_motif -input -output -f -t -d -w
 | -t              | int           | the number of thread (when using OPENMP) |  No default 1              |
 | -d             | int          | the thrd (when using OPENMP)                        | No default INT_MAX |
 | -w            | int           | time span                                                          | No default INT_MAX |
+
 for example, if you want to count all temporal-motifs within the time span of 600 in *input.txt*, with 8 threads, thrd=200000 and output results to *output.txt*, you can run the program as follows:
 ```bash
 FAST_temporal_motif -input input.txt -output output.txt -f 1 -t 8 -d 200000 -w 600
@@ -55,7 +56,6 @@ The order of the arguments can be changed
 n rows, each row represents a directed edge
 
 3 data in each row, representing node 1, node 2, and timestamp
-
 use space as separator
 ### Output file
 a 6*6 martix
