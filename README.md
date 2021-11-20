@@ -22,11 +22,17 @@
 ├── makefile
 └── README.md
 ```
+
 2. do "make* to compile the project, and get FAST_temporal_motif.exe
 ```bash
 make
 ```
+
 3. you can do *make clean* to remove FAST_temporal_motif.exe and all .o files
+```bash
+make clean
+```
+
 ### Compile settings
 you can modify *makefile* to change compile settings. The default settings:
 1. compile the project without using OPENMP. You can set the *OMPFLAG* to true to compile the project into a openmp program if you want it work with multiple threads
@@ -56,6 +62,7 @@ The order of the arguments can be changed
 n rows, each row represents a directed edge
 
 3 data in each row, representing node 1, node 2, and timestamp
+
 use space as separator
 ### Output file
 a 6*6 martix
