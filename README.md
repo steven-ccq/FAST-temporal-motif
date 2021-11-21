@@ -46,9 +46,9 @@ FAST_temporal_motif -input -output -f -t -d -w
 |----------- |----------|--------------------------------------------------|----------------------|
 | -input       | string     | the path of input data file                                 | Yes                            |
 | -output    | string      | the path of output file                                      | Yes                            |
-| -f              | int *1/0* | use/not use OPENMP                                       | No default 0             |
-| -t              | int           | the number of thread (when using OPENMP) |  No default 1              |
-| -d             | int          | the thrd (when using OPENMP)                        | No default INT_MAX |
+| -f              | int *0/1* | single/multiple threads                                       | No default 0             |
+| -t              | int           | the number of thread (when using multiple threads) |  No default 1              |
+| -d             | int          | the thrd (when using multiple threads)                        | No default INT_MAX |
 | -w            | int           | time span                                                          | No default INT_MAX |
 
 for example, if you want to count all temporal-motifs within the time span of 600 in *input.txt*, with 8 threads, thrd=200000 and output results to *output.txt*, you can run the program as follows:
