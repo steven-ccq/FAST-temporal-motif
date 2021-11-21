@@ -4,7 +4,7 @@ SPATH = src
 OBJS = main.o global.o edgeLoader.o starAndPairCount.o triangleCount.o convertMartix.o
 CC = g++
 DEBUG = -g
-CFLAGS = -std=c++11 -Wall
+CFLAGS = -std=c++11 -O3 -Wall
 
 OMPFLAG = false
 

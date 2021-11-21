@@ -1,5 +1,5 @@
 # FAST-temporal-motif
-*Fast-temporal-motif* is a algorithm proposed to count sub-graphs(*3 types, star, pair and triangle*) in temporal graphs. This repositority provide source code of the algorithm, which may help researchers have a better understanding of the algorithm. Besides, people can directly compile the project to have a quick start to verify the correctness and efficiency of the algorithm.
+*Fast-temporal-motif* is an algorithm proposed to count sub-graphs(*3 types, star, pair and triangle*) in temporal graphs. This repositority provides source code of the algorithm, which may help researchers have a better understanding of the algorithm. Besides, people can directly compile the project to have a quick start to verify the correctness and efficiency of the algorithm.
 
 ## Compile
 ### Compile the project
@@ -30,7 +30,7 @@ make
 ### Compile settings
 you can modify *makefile* to change compile settings. The default settings:
 1. compile the project without using OPENMP. You can set the *OMPFLAG* to true to compile the project into a openmp program if you want it work with multiple threads
-2. use -O2 Optimize
+2. use -O3 Optimize
 
 ## Command line arguments
 ```bash
