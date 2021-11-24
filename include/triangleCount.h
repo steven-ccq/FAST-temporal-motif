@@ -1,21 +1,13 @@
 #ifndef TRIANGLE_COUNT_H
 #define TRIANGLE_COUNT_H
 
-using namespace std;
+/* count triangle-motifs */
 
-#include<string>
-#include<vector>
-#include<string>
-#include<fstream>
-#include <algorithm>
-#include<set>
-#include<map>
-#include<unordered_map>
-#include "edgeLoader.h"
-
-//Èý½ÇÐÎ¼ÆÊý
+/* use without OPENMP only */
 void countTriedNum(vector<StarEdgeData>& edges, vector<bool>& counted, int allTriedNum[3][2][2][2], int timeWindow);
+
+/* parallel counting method*/
 void countTriedNum_parallel(vector<StarEdgeData>& edges, int allTriedNum[3][2][2][2], int timeWindow);
-//三角形计数 内部并行
+/* for nodes with degree >= thrd, use inner parallel method*/
 void countTriedNum_innerParallel(vector<StarEdgeData>& edges, int allTriedNum[3][2][2][2], int timeWindow);
 #endif // TRIANGLE_COUNT_H
