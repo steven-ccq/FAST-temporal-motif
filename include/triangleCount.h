@@ -1,6 +1,9 @@
 #ifndef TRIANGLE_COUNT_H
 #define TRIANGLE_COUNT_H
 
+#include<vector>
+#include "edgeLoader.h"
+
 /* count triangle-motifs */
 
 /* use without OPENMP only */
