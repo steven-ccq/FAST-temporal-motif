@@ -1,14 +1,7 @@
 #ifndef STAR_AND_PAIR_COUNT_H
 #define STAR_AND_PAIR_COUNT_H
 
-#include<string>
 #include<vector>
-#include<string>
-#include<fstream>
-#include <algorithm>
-#include<set>
-#include<map>
-#include<unordered_map>
 #include "edgeLoader.h"
 
 /* count pair-motifs and star-motifs */
