@@ -14,13 +14,18 @@ int main(int argc, char **argv)
     for(int i=1;i<argc;i+=2)
     {
         args[argv[i]] = argv[i+1];
-        cout << argv[i] << " " << argv[i+1] << endl;
     }
+    /* input data file */
     const string inputFile = args["-input"];
+    /* output file */
     const string outputFile = args["-output"];
+    /* OPENMP flag */
     if(args.find("-f")!=args.end()) ompFlag = stoi(args["-f"]);
+    /* the number of threads */
     if(args.find("-t")!=args.end()) threadNum = stoi(args["-t"]);
+    /* thrd */
     if(args.find("-d")!=args.end()) thrd = stoi(args["-d"]);
+    /* time span */
     int timeWindow = 2147483647;
     if(args.find("-w")!=args.end()) timeWindow = stoi(args["-w"]);
 
@@ -93,5 +98,6 @@ int main(int argc, char **argv)
         }
         outfile << "\n";
     }
+    outfile.close()
     return 0;
 }
