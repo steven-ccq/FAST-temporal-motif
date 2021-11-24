@@ -23,18 +23,24 @@ bool getEdges(const string& file)
     {
         int node1, node2, timestamp;
         infile >> node1 >> node2 >> timestamp;
+        /* remove self-loop */
         if(node1==node2) continue;
         Edge edge(node1, node2, timestamp);
         edges.push_back(edge);
     }
     infile.close();
-    int edgesNum = edges.size();
+    /**************************************************
+    a newline character in the end of the data file will cause the last line to be read twice
+    if the data file ends with a newline character, you can add this operation
     if(edgesNum>0)
     {
         edges.pop_back();
         edgesNum -= 1;
     }
-    cout << edgesNum << endl;
+    **************************************************/
+    int edgesNum = edges.size();
+    cout << "edgeNum: " << edgesNum << endl;
+    /* convert numbers of nodes to 0-nodesNum */
     set<int> nodes;
     for(int i=0;i<edgesNum;i++)
     {
@@ -58,7 +64,7 @@ bool getEdges(const string& file)
 
 void getStarEdges()
 {
-    cout << "insert" << endl;
+    cout << "inserting..." << endl;
     StarEdgeData starEdge;
     for(Edge& edge:edges)
     {
@@ -70,7 +76,7 @@ void getStarEdges()
         starEdge.dir = 0;
         starEdges[edge.node2].push_back(starEdge);
     }
-    cout << "sort" << endl;
+    cout << "sorting..." << endl;
     int starEdgesNum = starEdges.size();
     for(int i=0;i<starEdgesNum;i++)
     {
