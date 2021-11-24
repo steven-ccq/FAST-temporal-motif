@@ -13,7 +13,7 @@
 
 using namespace std;
 
-// 边，记录两点编号和时间
+/* an edge records 3 information: number of two nodes and a timestamp */
 struct Edge {
     int node1;
     int node2;
@@ -27,7 +27,8 @@ struct Edge {
     }
 };
 
-//星形边，记录一点周围的边
+/* a starEdge is used to represent an edge connect to a specific node */
+/* a starEdge records 3 information: number of the node in another side, timestamp and direction relative to the specific node (1-out 0-in) */
 struct StarEdgeData {
     int t;
     int nbr;
@@ -41,13 +42,12 @@ struct StarEdgeData {
     }
 };
 
-//函数声明
-//排序函数
+/* sorting algorithm */
 bool cmp(const StarEdgeData& edge1, const StarEdgeData& edge2);
-//获取所有边
+/* get all edges from data file */
 bool getEdges(const string& file);
-//获取starEdges
+/* convert edges into starEdges */
 void getStarEdges();
-//获取edgeMap
+/* get the map of connections between nodes */
 void getEdgeMap();
 #endif // EDGE_LOADER
