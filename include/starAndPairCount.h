@@ -11,6 +11,6 @@
 #include<unordered_map>
 #include "edgeLoader.h"
 
-//starºÍpair¼ÆÊý
+/* count pair-motifs and star-motifs */
 void countStarNum(vector<StarEdgeData>& center_edges, int allStarNum[3][2][2][2], int allPairNum[2][2][2], int timeWindow);
 #endif // STAR_AND_PAIR_H
