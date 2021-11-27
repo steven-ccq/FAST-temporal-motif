@@ -1,5 +1,9 @@
 # FAST-temporal-motif
-*Fast-temporal-motif* is an algorithm proposed to count sub-graphs(*3 types, star, pair and triangle*) in temporal graphs. This repositority provides source code of the algorithm, which may help researchers have a better understanding of the algorithm. Besides, people can directly compile the project to have a quick start to verify the correctness and efficiency of the algorithm.
+This is the source code for our ICDE2022 submission:
+
+*ID: 627, Title: Scalable Motif Counting for Large-scale Temporal Graphs.* 
+
+Fast-temporal-motif is an algorithm proposed to count sub-graphs (i.e., motifs) in temporal graphs. This repository provides the source code of the algorithm. Besides, researchers can directly compile the project to have a quick start to verify the correctness and efficiency of the proposed algorithm.
 
 ## Compile
 ### Compile the project
@@ -23,7 +27,7 @@
 └── README.md
 ```
 
-2. do "make* to compile the project, and get FAST_temporal_motif.exe
+2. execute "make* to compile the project, and get FAST_temporal_motif.exe
 ```bash
 make
 ```
@@ -42,14 +46,14 @@ you can modify *makefile* to change compile settings. The default settings:
 ```bash
 FAST_temporal_motif -input -output -f -t -d -w
 ```
-| Argument | Type      | Meaning                                                           | Required                   |
-|----------- |----------|--------------------------------------------------|----------------------|
-| -input       | string     | the path of input data file                                 | Yes                            |
-| -output    | string      | the path of output file                                      | Yes                            |
-| -f              | int *0/1* | single/multiple threads                                       | No default 0             |
-| -t              | int           | the number of thread (when using multiple threads) |  No default 1              |
-| -d             | int          | the thrd (when using multiple threads)                        | No default INT_MAX |
-| -w            | int           | time span                                                          | No default INT_MAX |
+| Argument | Type      | Meaning                                               | Required           |
+|----------|-----------|-------------------------------------------------------|--------------------|
+| -input   | string    | the path of input data file                           | Yes                |
+| -output  | string    | the path of output file                               | Yes                |
+| -f       | int *0/1* | single/multiple threads                               | No default 0       |
+| -t       | int       | the number of threads (when using multiple threads)   | No default 1      |
+| -d       | int       | the threshold of degree (when using multiple threads) | No default INT_MAX |
+| -w       | int       | time window                                           | No default INT_MAX |
 
 for example, if you want to count all temporal-motifs within the time span of 600 in *input.txt*, with 8 threads, thrd=200000 and output results to *output.txt*, you can run the program as follows:
 ```bash
@@ -65,4 +69,4 @@ n rows, each row represents a directed edge
 
 use space as separator
 ### Output file
-a 6*6 martix
+a 6\*6 martix, each element representing the number of motif instances for $M_{i,j}$ in our paper.
