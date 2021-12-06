@@ -27,7 +27,7 @@ Fast-temporal-motif is an algorithm proposed to count sub-graphs (i.e., motifs)
 └── README.md
 ```
 
-2. execute "make* to compile the project, and get FAST_temporal_motif.exe
+2. execute *make* to compile the project, and get FAST_temporal_motif.exe
 ```bash
 make
 ```
@@ -44,7 +44,7 @@ you can modify *makefile* to change compile settings. The default settings:
 
 ## Command line arguments
 ```bash
-FAST_temporal_motif -input -output -f -t -d -w
+./FAST_temporal_motif -input -output -f -t -d -w
 ```
 | Argument | Type      | Meaning                                               | Required           |
 |----------|-----------|-------------------------------------------------------|--------------------|
@@ -57,7 +57,7 @@ FAST_temporal_motif -input -output -f -t -d -w
 
 for example, if you want to count all temporal-motifs within the time span of 600 in *input.txt*, with 8 threads, thrd=200000 and output results to *output.txt*, you can run the program as follows:
 ```bash
-FAST_temporal_motif -input input.txt -output output.txt -f 1 -t 8 -d 200000 -w 600
+./FAST_temporal_motif -input input.txt -output output.txt -f 1 -t 8 -d 200000 -w 600
 ```
 The order of the arguments can be changed
 
