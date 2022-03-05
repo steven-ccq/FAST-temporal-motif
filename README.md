@@ -70,3 +70,6 @@ n rows, each row represents a directed edge
 use space as separator
 ### Output file
 a 6\*6 martix, each element representing the number of motif instances for $M_{i,j}$ in our paper.
+
+## Experiment
+Results of our experiments are shown in **appendix.pdf**
